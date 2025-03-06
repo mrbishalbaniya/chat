@@ -68,9 +68,6 @@ io.on('connection', (socket) => {
         }
     });
 });
-socket.on("call_user", (data) => {
-    io.to(users[data.to]).emit("incoming_call", { from: data.from });
-});
 
 
 const PORT = process.env.PORT || 3000;
